@@ -1,11 +1,15 @@
 import '../App.css';
 import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
+import Tabla from './tabla.js';
 // import Button from 'semantic-ui-react';
 
 
-function formulario(){
+export default function Formulario(){
+    const [datos , Mensaje ] = useState('');
     const setInvoice = () =>{
-        alert('Hola');
+
+        Mensaje("Datos ingresados");
     }
 return(
     <div className='App'>
@@ -24,7 +28,6 @@ return(
                 <Button variant="outline-success" onClick={()=> setInvoice()} >Agregar</Button>
             </div>
         </form>
+        <Tabla setInvoice={datos}/>
     </div>
-);
-}
-export default formulario;
+);}
