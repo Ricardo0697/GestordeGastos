@@ -64,9 +64,9 @@ return(
             <div className='col-md-12'>
                 <TextField 
                     id='filled-number'
-                    label="Costo"
+                    label="Gasto"
                     type="number"
-                    name='Costo'
+                    name='Gasto'
                     inputLabelProps={{
                         shrink: true,
                     }}
