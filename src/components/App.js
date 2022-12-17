@@ -2,6 +2,7 @@
 import '../App.css';
 import load from '../asset/1_DXvI3dy2rKOMzV8S3fKFMQ.gif';
 import React , { useState, useEffect } from 'react';
+import {Router, Route} from 'react-router-dom';
 // import loadingScreen from './loading';
 import Formulario from './formulario';
 import LoadingScreen from 'react-loading-screen';
@@ -31,7 +32,10 @@ function App() {
       logoSrc={load}
       ></LoadingScreen> 
     <div className="col-md-12">
-      <Formulario></Formulario>
+      <Router>
+        <Route path='./formulario.js'></Route>
+      </Router>
+      {/* <Formulario></Formulario> */}
 
       </div>
     </div>

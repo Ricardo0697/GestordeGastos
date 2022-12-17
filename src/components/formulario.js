@@ -53,7 +53,7 @@ return(
         
     <div className='Apps '>
         <div className='col-md-12'>
-            <h1>Gastos</h1>
+            <h1 className='text-3xl font-bold underline'>Gastos</h1>
         </div>
         <form action='/gasto' method='POST'>
             <div className='col-md-12'>
