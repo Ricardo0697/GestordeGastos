@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
-import Formulario from './components/formulario';
+import App from './components/App';
+// import Formulario from './components/formulario';
 import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Formulario></Formulario>
+  <App></App>
 );
 
 // If you want to start measuring performance in your app, pass a function

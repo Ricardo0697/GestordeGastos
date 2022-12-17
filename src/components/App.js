@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import '../App.css';
-
+import load from '../asset/1_DXvI3dy2rKOMzV8S3fKFMQ.gif';
+import React , { useState, useEffect } from 'react';
+// import loadingScreen from './loading';
+import Formulario from './formulario';
+import LoadingScreen from 'react-loading-screen';
 function App() {
+  const [loading, setLoading] = useState(false);
+  let loadin = true;
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000);
+  }, []);
+  const endTime = ()=>{
+   
+    return false;
+  }
+  // useEffect(() => {
+  const time =  setTimeout(endTime, 1000);
+  // });
+
   return (
+    <>
+    <LoadingScreen loading={loading}
+      bgColor='#fff'
+      spinnerColor='#9ee5f8'
+      textColor='#676767'
+      logoSrc={load}
+      ></LoadingScreen> 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Formulario></Formulario>
+      </div>
+    </>
   );
 }
 
