@@ -1,4 +1,4 @@
-import logo from '../logo.svg';
+
 import '../App.css';
 import load from '../asset/1_DXvI3dy2rKOMzV8S3fKFMQ.gif';
 import React , { useState, useEffect } from 'react';

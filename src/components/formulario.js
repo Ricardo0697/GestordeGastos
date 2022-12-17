@@ -52,8 +52,10 @@ return(
     <Box>
         
     <div className='Apps '>
-            <h1>Formulario de Ingreso</h1>
-        <form action='/createAdd' method='POST'>
+        <div className='col-md-12'>
+            <h1>Gastos</h1>
+        </div>
+        <form action='/gasto' method='POST'>
             <div className='col-md-12'>
                 <TextField required
                 id="outlined-required"
