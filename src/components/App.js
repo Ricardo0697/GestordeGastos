@@ -23,17 +23,18 @@ function App() {
   // });
 
   return (
-    <>
+    <div className='Apps'>
     <LoadingScreen loading={loading}
       bgColor='#fff'
       spinnerColor='#9ee5f8'
       textColor='#676767'
       logoSrc={load}
       ></LoadingScreen> 
-    <div className="App">
+    <div className="col-md-12">
       <Formulario></Formulario>
+
       </div>
-    </>
+    </div>
   );
 }
 
