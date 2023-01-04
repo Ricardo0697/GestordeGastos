@@ -2,9 +2,10 @@
 import '../App.css';
 import load from '../asset/1_DXvI3dy2rKOMzV8S3fKFMQ.gif';
 import React , { useState, useEffect } from 'react';
-import {Router, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 // import loadingScreen from './loading';
 import Formulario from './formulario';
+import Login from '../components/Login';
 import LoadingScreen from 'react-loading-screen';
 function App() {
   const [loading, setLoading] = useState(false);
@@ -12,16 +13,16 @@ function App() {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      setLoading(false);
+      setLoading(false); 
     }, 6000);
   }, []);
   const endTime = ()=>{
    
     return false;
   }
-  // useEffect(() => {
+  useEffect(() => {
   const time =  setTimeout(endTime, 1000);
-  // });
+  });
 
   return (
     <div className='Apps'>
@@ -32,11 +33,12 @@ function App() {
       logoSrc={load}
       ></LoadingScreen> 
     <div className="col-md-12">
-      <Router>
-        <Route path='./formulario.js'></Route>
-      </Router>
-      {/* <Formulario></Formulario> */}
-
+      <Routes>
+        <Route path='/' element={<Login/>}></Route>
+        {/* <Route path='/formulario.js'></Route> */}
+        <Route path="/formulario" element={<Formulario/>}></Route>
+                
+      </Routes>
       </div>
     </div>
   );
